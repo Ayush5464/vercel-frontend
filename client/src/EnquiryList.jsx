@@ -16,7 +16,7 @@ function EnquiryList() {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get("http://localhost:8000/api/enquiry/");
+      const response = await axios.get("https://vercel-backend-blush.vercel.app/api/enquiry/");
       setEnquiryList(response.data);
     } catch (error) {
       console.error("Fetch error:", error);

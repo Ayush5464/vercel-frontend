@@ -25,7 +25,7 @@ function EnquiryList() {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:8000/api/enquiry/${id}`);
+      await axios.delete(`https://vercel-backend-blush.vercel.app/api/enquiry/${id}`);
       setEnquiryList((prevList) => prevList.filter((item) => item._id !== id));
     } catch (error) {
       console.error("Delete error:", error);
@@ -51,7 +51,7 @@ function EnquiryList() {
   const handleEditSubmit = async (id) => {
     try {
       const res = await axios.put(
-        `http://localhost:8000/api/enquiry/${id}`,
+        `https://vercel-backend-blush.vercel.app/api/enquiry/${id}`,
         editData
       );
       // update state

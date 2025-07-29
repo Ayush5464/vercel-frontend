@@ -23,7 +23,7 @@ function Enquiry() {
     e.preventDefault();
 
     await axios
-      .post("http://localhost:8000/api/enquiry/", formData)
+      .post("https://vercel-backend-blush.vercel.app/api/enquiry/", formData)
       .then((res) => {
         toast.success("Enquiry safed successfully");
         console.log(res.data);
